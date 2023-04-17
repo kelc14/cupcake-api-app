@@ -14,25 +14,54 @@
     <link rel="stylesheet" href="{{ url_for('static',filename='app.css') }}" />
   </head>
   <body>
-    <h1 class="display-1 text-center">Cupcakes!</h1>
-    <div class="list-group" id="cupcake-list"></div>
+    <!-- *********************** -->
+    <!-- ******* NAV BAR *******  -->
+    <!-- *********************** -->
+
+    <!-- <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand display-2">CUPCAKES</a>
+      <form class="form-inline" id="search-form">
+        <input
+          class="form-control mr-sm-2"
+          type="search"
+          id="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+          Search
+        </button>
+      </form>
+    </nav> -->
+
+    <!-- *********************** -->
+    <!-- **** CUPCAKE LIST  ****  -->
+    <!-- *********************** -->
+    <h2 class="display-2 text-center">CUPCAKES!</h2>
+
+    <div class="container d-flex p-2 flex-wrap" id="cupcake-list"></div>
+
+    <!-- *********************** -->
+    <!-- *** NEW CUPCAKE FORM ***  -->
+    <!-- *********************** -->
 
     <h3 class="display-3 text-center">Add a New Cupcake</h3>
-    <div class="container-sm">
-      <form action="#" method="post">
+    <div class="container w-50 p-3 border rounded">
+      <form action="#" id="add-cupcake">
         <div class="form-group">
           <label for="flavor">Flavor</label>
-          <input type="text" name="flavor" class="form-control" />
+          <input type="text" name="flavor" id="flavor" class="form-control" />
         </div>
         <div class="form-group">
           <label for="size">Size</label>
-          <input type="text" name="size" class="form-control" />
+          <input type="text" name="size" id="size" class="form-control" />
         </div>
         <div class="form-group">
           <label for="rating">Rating</label>
           <input
             type="number"
             name="rating"
+            id="rating"
             class="form-control"
             min="0"
             max="10"
@@ -40,7 +69,7 @@
         </div>
         <div class="form-group">
           <label for="image">Image URL</label>
-          <input type="text" name="image" class="form-control" />
+          <input type="text" name="image" id="image" class="form-control" />
         </div>
         <button class="btn btn-success">Submit</button>
       </form>

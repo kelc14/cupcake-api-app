@@ -68,6 +68,17 @@ def delete_cupcake(id):
     return jsonify(message="deleted")
 
 
+# @app.route('/api/cupcakes/search')
+# def filter_cupcakes():
+#     searchTerm = request.GET("q")
+#     print('*********************')
+#     print(searchTerm)
+#     print('*********************')
+#     all_cupcakes = [cupcake.serialize() for cupcake in Cupcake.query.all()]
+    
+#     return jsonify(cupcakes=all_cupcakes)
+
+
 
 
     
